@@ -46,8 +46,8 @@ echo "
         ServerName www.$1.com
         DocumentRoot /var/www/html/$1
 
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        ErrorLog '\$'{APACHE_LOG_DIR}/error.log
+        CustomLog '\$'{APACHE_LOG_DIR}/access.log combined
         Options +Indexes -FollowSymLinks +MultiViews
 </VirtualHost>
 

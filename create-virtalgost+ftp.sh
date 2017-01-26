@@ -38,7 +38,9 @@ chown $1:www-data /home/$1/public
 
 
 #Creación del virtual host
-
+#Es necesario añadir una línea al host al que queremos crear :
+#Include /etc/apache2/sites-available/list
+#Es posible que se tenga que crear el archivo list con permiso de escritura.
 
 echo "Alias /$1 /var/www/html/$1/
     <Directory /var/www/html/$1/>
